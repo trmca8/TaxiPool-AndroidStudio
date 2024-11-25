@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "313702038968",
+    "project_id": "taxipoll-kotlin",
+    "storage_bucket": "taxipoll-kotlin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313702038968:android:a4510d515761d73eafe34d",
+        "android_client_info": {
+          "package_name": "com.example.taxipoll"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd9wCm2LgWCgTwXRbgcpr1js0wEm80Bro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
