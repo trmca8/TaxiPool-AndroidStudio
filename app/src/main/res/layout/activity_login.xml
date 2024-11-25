@@ -18,7 +18,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="32dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -26,6 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@android:color/white"
         android:hint="Email"
         android:minHeight="48dp"
@@ -33,7 +33,6 @@
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="16dp"
         app:layout_constraintTop_toBottomOf="@+id/tvRegistracija"
         tools:ignore="VisualLintTextFieldSize" />
 
@@ -42,6 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@android:color/white"
         android:hint="Lozinka"
         android:inputType="textPassword"
@@ -50,14 +50,14 @@
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_margin="16dp"
-        app:layout_constraintTop_toBottomOf="@id/LogEmailTXT" />
-
+        app:layout_constraintTop_toBottomOf="@id/LogEmailTXT"
+        />
 
     <Button
         android:id="@+id/ProfilBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/dugmeboja"
         android:text="Prijavi se"
         app:layout_constraintEnd_toEndOf="@+id/LogLozinkaTXT"
