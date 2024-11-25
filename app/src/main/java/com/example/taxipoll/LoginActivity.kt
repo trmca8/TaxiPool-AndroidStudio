@@ -1,6 +1,7 @@
 package com.example.taxipoll
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -42,7 +43,9 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d(TAG, "signInWithEmail:success")
-
+                        val user = auth.currentUser
+                        val intent = Intent(applicationContext, MainActivity::class.java)
+                        startActivity(intent)
                         finish()
 
                     } else {
@@ -55,10 +58,6 @@ class LoginActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
-
-
-
-
         }
     }
 }
