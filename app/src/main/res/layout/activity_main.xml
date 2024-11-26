@@ -114,6 +114,12 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/MainRecView"
                 android:layout_width="match_parent"
@@ -121,13 +127,16 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <ProgressBar
-                android:id="@+id/progressBar2"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
+
+    <!-- Fragment container -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigationBar" />
 
     <!-- Navigaciona traka -->
     <LinearLayout
@@ -153,7 +162,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@android:drawable/ic_menu_search" />
+                android:src="@android:drawable/ic_menu_search"
+                tools:ignore="DuplicateIds,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView"
@@ -163,7 +173,8 @@
                 android:gravity="center"
                 android:text="Pretrazite"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="DuplicateIds" />
         </LinearLayout>
 
         <LinearLayout
@@ -173,12 +184,13 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/btnPretrazite"
+                android:id="@+id/btnObjavite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@android:drawable/ic_menu_add" />
+                android:src="@android:drawable/ic_menu_add"
+                tools:ignore="DuplicateIds,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView"
@@ -188,7 +200,8 @@
                 android:gravity="center"
                 android:text="Objavite"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="DuplicateIds" />
         </LinearLayout>
 
         <LinearLayout
@@ -198,12 +211,13 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/btnPretrazite"
+                android:id="@+id/btnVoznje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@android:drawable/ic_menu_mapmode" />
+                android:src="@android:drawable/ic_menu_mapmode"
+                tools:ignore="DuplicateIds,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView"
@@ -213,7 +227,8 @@
                 android:gravity="center"
                 android:text="Sve Voznje"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="DuplicateIds" />
         </LinearLayout>
 
         <LinearLayout
@@ -223,12 +238,13 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/btnPretrazite"
+                android:id="@+id/btnKontakt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@android:drawable/ic_menu_send" />
+                android:src="@android:drawable/ic_menu_send"
+                tools:ignore="DuplicateIds,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView"
@@ -238,7 +254,8 @@
                 android:gravity="center"
                 android:text="Kontakt"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="DuplicateIds" />
         </LinearLayout>
 
         <LinearLayout
@@ -248,12 +265,13 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/btnPretrazite"
+                android:id="@+id/btnProfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@android:drawable/ic_menu_my_calendar" />
+                android:src="@android:drawable/ic_menu_my_calendar"
+                tools:ignore="DuplicateIds,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/textView"
@@ -263,7 +281,8 @@
                 android:gravity="center"
                 android:text="Profil"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                tools:ignore="DuplicateIds" />
         </LinearLayout>
 
     </LinearLayout>

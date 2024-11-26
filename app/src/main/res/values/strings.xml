@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TaxiPoll</string>
+    <string name="kontakt">KONTAKT</string>
+    <string name="prijavi_se">PRIJAVI SE</string>
+    <string name="email">Email</string>
+    <string name="lozinka">Lozinka</string>
+    <string name="prijavi_se_dugme">Prijavi se</string>
+    <string name="objavi_voznju">Objavi voznju</string>
+    <string name="unesite_punu_adresu">Unesite punu adresu</string>
+    <string name="upotrebi_moju_lokaciju">Upotrebi moju lokaciju</string>
+    <string name="unesite_punu_adresu_objavite">Unesite punu adresu</string>
+    <string name="icon2">Icon1</string>
+    <string name="search1">search1</string>
+    <string name="odakle_polazite">ODAKLE POLAZITE?</string>
+    <string name="gde_idete">GDE IDETE?</string>
+    <string name="registracija">REGISTRACIJA</string>
+    <string name="ime_i_prezime">Ime i prezime</string>
 </resources>
