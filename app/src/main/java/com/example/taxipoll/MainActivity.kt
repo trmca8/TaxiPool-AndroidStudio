@@ -1,13 +1,12 @@
 package com.example.taxipoll
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
@@ -15,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Navigacija
+        // Navigacija za dugmad u navigacionoj traci
         findViewById<ImageButton>(R.id.btnPretrazite).setOnClickListener {
-            recreate()
+            startActivity(Intent(this@MainActivity, MainActivity::class.java))
         }
 
         findViewById<ImageButton>(R.id.btnObjavite).setOnClickListener {
-            replaceFragment(ObjaviFragment())
+            replaceFragment(ObjaviteFragment())
         }
         findViewById<ImageButton>(R.id.btnVoznje).setOnClickListener {
             replaceFragment(VoznjeFragment())
@@ -32,26 +31,24 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.btnProfil).setOnClickListener {
             replaceFragment(ProfilFragment())
         }
+
+        // Navigacija za dugme MainPretraziBtn
+        findViewById<Button>(R.id.MainPretraziBtn).setOnClickListener {
+            replaceFragment(VoznjeFragment()) // Navigacija na VoznjeFragment
+        }
     }
 
     private fun replaceFragment(fragment: Fragment?) {
-        // Zameni fragment samo ako nije null (ostali tabovi)
+        // Zameni fragment samo ako nije null
         fragment?.let {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, it)
+                .addToBackStack(null) // Omogućava povratak na prethodni fragment
                 .commit()
         }
 
-        // Proveri da li je aktivan "Pretrazite" ili ostali tabovi
+        // Podesi vidljivost CardView za polje pretrage
         val cardView = findViewById<CardView>(R.id.cardPretraga)
-        if (fragment == null) {
-            // Ako je fragment null, to znači da smo na MainActivity (Pretrazite)
-            cardView.visibility = View.VISIBLE
-        } else {
-            // Sakrij CardView za sve ostale tabove (fragmente)
-            cardView.visibility = View.GONE
-        }
+        cardView.visibility = if (fragment == null) View.VISIBLE else View.GONE
     }
-
-
 }

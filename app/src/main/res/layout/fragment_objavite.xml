@@ -30,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/dugmeboja"
             app:cardCornerRadius="24dp"
             app:cardElevation="8dp"
@@ -54,22 +55,24 @@
                     android:tint="@android:color/white"
                     tools:ignore="UseAppTint" />
 
-                <TextView
+                <EditText
                     android:id="@+id/ObjaviOdakleTXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="@string/unesite_punu_adresu_objavite"
+                    android:hint="@string/unesite_punu_adresu"
                     android:textColor="@color/design_default_color_surface"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    app:tint="@android:color/white" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView
+        <Button
             android:id="@+id/ObjaviLokacijaBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dugmeboja"
             android:text="@string/upotrebi_moju_lokaciju"
             android:textColor="@android:color/white"
             android:textSize="16sp"
@@ -120,12 +123,12 @@
                     android:tint="@android:color/white"
                     tools:ignore="UseAppTint" />
 
-                <TextView
+                <EditText
                     android:id="@+id/ObjaviGdeTXT"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="@string/unesite_punu_adresu"
+                    android:hint="@string/unesite_punu_adresu"
                     android:textColor="@color/design_default_color_surface"
                     android:textSize="16sp"
                     app:tint="@android:color/white" />

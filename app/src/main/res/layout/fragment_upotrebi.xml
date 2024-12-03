@@ -31,20 +31,26 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="16dp">
 
-                <TextView
+                <EditText
                     android:id="@+id/tvAdresa"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:text="Adresa"
+                    android:hint="Adresa"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:padding="8dp" />
 
                 <ImageView
                     android:id="@+id/ivClose"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Obriši unos"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     app:tint="@android:color/white" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -65,13 +71,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@android:drawable/ic_media_play"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Prosledi lokaciju"
+            android:background="?attr/selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:tint="@android:color/white" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Google mapa placeholder -->
-
-    <!-- Dugme sa strelicom -->
 
 </FrameLayout>
