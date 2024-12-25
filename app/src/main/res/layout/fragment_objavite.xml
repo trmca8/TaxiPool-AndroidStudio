@@ -16,10 +16,12 @@
             android:id="@+id/ObjaviBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:backgroundTint="@color/dugmeboja"
             android:text="@string/objavi_voznju"
-            app:layout_constraintTop_toBottomOf="@+id/cardPretraga4"
-            tools:layout_editor_absoluteX="139dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardPretraga4" />
 
         <TextView
             android:id="@+id/tvNaslov"
@@ -203,6 +205,10 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
             android:text="U KOLIKO SATI?"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -212,20 +218,38 @@
             android:id="@+id/cardPretraga4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:background="#3650a6"
+                android:gravity="center_vertical"
+                android:importantForAccessibility="no"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
                 <EditText
                     android:id="@+id/editTextTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="time" />
+                    android:hint="Unesite u koje vreme"
+                    android:inputType="time"
+                    android:textColor="@color/design_default_color_surface"
+                    android:textSize="16sp"
+                    app:tint="@android:color/white" />
+
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
