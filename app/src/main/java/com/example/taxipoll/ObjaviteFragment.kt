@@ -6,38 +6,46 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class ObjaviteFragment : Fragment() {
 
+    private lateinit var odakleInput: EditText
+    private lateinit var gdeInput: EditText
+    private lateinit var vremeInput: EditText
+    private lateinit var objaviBtn: Button
+
+    companion object {
+        val voznjeList = mutableListOf<String>() // Deljena lista sa VoznjeFragment
+    }
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_objavite, container, false)
+        return inflater.inflate(R.layout.fragment_objavite, container, false)
+    }
 
-        // Pronalaženje elemenata
-        val objaviBtn: Button = view.findViewById(R.id.ObjaviBtn)
-        val objaviLokacijaBtn: Button = view.findViewById(R.id.ObjaviLokacijaBtn)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Funkcionalnost za dugme "Objavi vožnju"
+        // Inicijalizacija UI komponenata
+        odakleInput = view.findViewById(R.id.ObjaviOdakleTXT)
+        gdeInput = view.findViewById(R.id.ObjaviKolikoTXT)
+//        vremeInput = view.findViewById(R.id.timePicker)
+        objaviBtn = view.findViewById(R.id.ObjaviBtn)
+
         objaviBtn.setOnClickListener {
-            // Navigacija na VoznjeFragment
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, VoznjeFragment())
-                .addToBackStack(null)
-                .commit()
-        }
+            val odakle = odakleInput.text.toString()
+            val gde = gdeInput.text.toString()
+            val vreme = vremeInput.text.toString()
 
-        // Funkcionalnost za dugme "Upotrebi moju lokaciju"
-        objaviLokacijaBtn.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, UpotrebiFragment())
-                .addToBackStack(null)
-                .commit()
-        }
+            if (odakle.isNotEmpty() && gde.isNotEmpty() && vreme.isNotEmpty()) {
+                val novaVoznja = "$odakle → $gde u $vreme"
+                voznjeList.add(novaVoznja) // Dodavanje voznje u listu
 
-        return view
+                // Navigacija nazad u VoznjeFragment
+                requireActivity().onBackPressedDispatcher.onBackPressed()
+            }
+        }
     }
 }
