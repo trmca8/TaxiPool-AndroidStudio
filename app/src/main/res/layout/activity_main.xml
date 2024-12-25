@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="120dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
                 android:background="@null"
                 android:drawableStart="@android:drawable/ic_menu_mylocation"
                 android:drawablePadding="8dp"
-                android:hint="Polazim iz"
+                android:hint="Pretrazi voznju"
                 android:padding="8dp" />
 
             <View
@@ -55,30 +55,12 @@
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray" />
 
-            <EditText
-                android:id="@+id/MainIdemTXT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:drawableStart="@android:drawable/ic_menu_mylocation"
-                android:drawablePadding="8dp"
-                android:hint="Idem do"
-                android:padding="8dp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray" />
 
-            <EditText
-                android:id="@+id/MainBrojTXT"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:drawableStart="@android:drawable/ic_menu_myplaces"
-                android:drawablePadding="8dp"
-                android:hint="Broj osoba"
-                android:padding="8dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

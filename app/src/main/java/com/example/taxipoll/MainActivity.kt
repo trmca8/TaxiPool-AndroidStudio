@@ -8,6 +8,10 @@ import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.example.taxipoll.fragments.KontaktFragment
+import com.example.taxipoll.fragments.ObjaviteFragment
+import com.example.taxipoll.fragments.ProfilFragment
+import com.example.taxipoll.fragments.VoznjeFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
