@@ -179,14 +179,7 @@
                 android:importantForAccessibility="no"
                 android:orientation="horizontal"
                 android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/ivSearchIcon3"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@android:drawable/ic_menu_search"
-                    android:tint="@android:color/white"
-                    tools:ignore="UseAppTint" />
+                
 
                 <EditText
                     android:id="@+id/ObjaviKolikoTXT"
