@@ -1,19 +1,21 @@
-package com.example.taxipoll
+package com.example.taxipoll.fragments
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.example.taxipoll.viewModel.KontaktViewModel
+import com.example.taxipoll.R
 
-class ProfilFragment : Fragment() {
+class KontaktFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ProfilFragment()
+        fun newInstance() = KontaktFragment()
     }
 
-    private val viewModel: ProfilViewModel by viewModels()
+    private val viewModel: KontaktViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +27,6 @@ class ProfilFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_profil, container, false)
+        return inflater.inflate(R.layout.fragment_kontakt, container, false)
     }
 }

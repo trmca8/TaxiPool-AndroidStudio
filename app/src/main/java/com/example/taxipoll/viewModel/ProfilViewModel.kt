@@ -1,4 +1,4 @@
-package com.example.taxipoll
+package com.example.taxipoll.viewModel
 
 import androidx.lifecycle.ViewModel
 

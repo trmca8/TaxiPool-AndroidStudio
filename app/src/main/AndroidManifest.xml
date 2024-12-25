@@ -13,19 +13,19 @@
         android:theme="@style/Theme.TaxiPoll"
         tools:targetApi="31">
         <activity
-            android:name=".ProfilFragment"
+            android:name=".fragments.ProfilFragment"
             android:exported="false" />
         <activity
-            android:name=".KontaktFragment"
+            android:name=".fragments.KontaktFragment"
             android:exported="false" />
         <activity
-            android:name=".VoznjeFragment"
+            android:name=".fragments.VoznjeFragment"
             android:exported="false" />
         <activity
-            android:name=".UpotrebiFragment"
+            android:name=".fragments.UpotrebiFragment"
             android:exported="false" />
         <activity
-            android:name=".ObjaviteViewModel"
+            android:name=".viewModel.ObjaviteViewModel"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
