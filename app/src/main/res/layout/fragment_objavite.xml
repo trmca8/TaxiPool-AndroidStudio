@@ -179,7 +179,7 @@
                 android:importantForAccessibility="no"
                 android:orientation="horizontal"
                 android:padding="16dp">
-                
+
 
                 <EditText
                     android:id="@+id/ObjaviKolikoTXT"
